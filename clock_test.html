@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+        
+        function getClock() {
+        console.clear();
+        const now = new Date();
+      console.log(now.getFullYear().toString().padStart(2, "0"));
+      console.log((now.getMonth() + 1).toString().padStart(2, "0"));
+      console.log(now.getDate().toString().padStart(2, "0"));
+      console.log(now.getHours().toString().padStart(2, "0"));
+      console.log(now.getMinutes().toString().padStart(2, "0"));
+      console.log(now.getSeconds().toString().padStart(2, "0"));
+        }
+        getClock()
+      setInterval(getClock, 1000)
+    </script>
+  </body>
+</html>
