@@ -12,7 +12,7 @@
 <div id="loginForm">
   <h1>Hello! What's your name?</hi>
   <form>
-  <input type="text">
+  <input id="loginInput" type="text">
   <button>Continue</button>
 </form>
 </div>
@@ -28,8 +28,10 @@
   <div id="goalMessage" class="hidden">
     <h3>TODAY</h3>
     <p></p>
-  <input type="checkbox"> 
-  <button>clear</button>
+  <input id="goalCheck" type="checkbox"> 
+  <button id="clearButton">clear</button>
+  <button id="editButton">edit</button>
+  <button id="newButton" class="hidden">new</button>
   </div>
 </div>
 </body>
@@ -37,25 +39,5 @@
 <script src="goal.js"></script>
 <script src="clock.js"></script>
 <script>
-
-
-
-// 질문 : 
-// 1.컨티뉴 누른 후에 인사말 메세지
-// good evening말고 시간에 따라 good morning, good afternoon
-// 표시되게 어떻게 하는지?
-
-// 2.이름쓰고 한번 컨티뉴 하면 다시 이름 입력하는 화면으로 돌아갈 수 없어서 
-// 새로고침하면 다시 초기화 되도록 어떻게 할 수 있는지?
-// + 할일 입력하고 나서도 마찬가지
-
-// 3.클리어 버튼 눌렀을 때, 다시 할일 리스트 작성으로
-// 넘어가고 싶은데 어떻게 구현하는지?
-
-// 4.체크박스 누르면 할일리스트가 줄긋기 어떻게 구현하는지?
-
-// 5.모멘텀에서는 할일 입력하면 버튼 누르지도 않았는데 Enter 
-// 혹은 마우스 이동 하는것만으로 체크박스리스트로 만들어주는데 
-// 어떻게 구현하는지?
 </script>
 </html>
