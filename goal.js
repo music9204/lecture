@@ -3,7 +3,7 @@ const goalForm = document.querySelector("#goalForm");
 const goalInput = document.querySelector("#goalInput");
 const goalMessage = document.querySelector("#goalMessage");
 const savedGoal = localStorage.getItem("goal");
-const goalText = goalMessage.querySelector("p");
+const goalText = goalMessage.querySelector("#goalText");
 const nice = document.querySelector("#nice");
 
 //Button 정의
@@ -31,10 +31,6 @@ const handleSubmit = (e) => {
   //화면에 표시
   renderGoal(goalInput.value);
 };
-
-// document.addEventListener("click", (e) => {
-//   if (!goalForm.classList.contains("hidden") && !goalForm.contains
-if (savedGoal) renderGoal(savedGoal);
 
 const handleClear = () => {
   //저장값 삭제, 골 메세지 숨김, 입력 폼 보임
@@ -85,9 +81,10 @@ const handleEdit = () => {
 const handleNew = () => {
   handleClear();
 };
+
 //이벤트 리스너 연결
 goalForm.addEventListener("submit", handleSubmit);
-clearButton.addEventListener("click", handleClear);
 checkbox.addEventListener("click", handleCheck);
 editButton.addEventListener("click", handleEdit);
 newButton.addEventListener("click", handleNew);
+clearButton.addEventListener("click", handleClear);

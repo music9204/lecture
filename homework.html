@@ -17,27 +17,32 @@
 </form>
 </div>
 <div id="mainContents" class="hidden">
+  <div id="weather"></div>
   <h2 id="greeting"></h2>
   <div id="goalForm">
     <h3>What is your main goal for today?</h3>
-    <form id="goalForm">
+    <form>
       <input id="goalInput" type="text">
       <button id="submitButton">submit</button>
     </form>
   </div>
   <div id="goalMessage" class="hidden">
     <h3>TODAY</h3>
-    <p></p>
+    <p id="goalText"></p>
   <input id="goalCheck" type="checkbox"> 
   <button id="clearButton">clear</button>
   <button id="editButton">edit</button>
   <button id="newButton" class="hidden">new</button>
+  </div>
+  <div id="quote">
+    <span></span>
+    <span></span>
   </div>
 </div>
 </body>
 <script src="login.js"></script>
 <script src="goal.js"></script>
 <script src="clock.js"></script>
-<script>
-</script>
+<script src="quote.js"></script>
+<script src="weather.js"></script>
 </html>
