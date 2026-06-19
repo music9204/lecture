@@ -30,19 +30,30 @@ const App = () => {
   };
 
   const handleToggle = (id) => {
-    const newTodo = todos.map((todo) => {
+    const newTodos = todos.map((todo) => {
       if (todo.id === id) {
         return { ...todo, checked: !todo.checked };
       }
       return todo;
     });
-    setTodos(newTodo);
+    setTodos(newTodos);
+  };
+
+  const handleRemove = (id) => {
+    const newTodos = todos.filter((todo) => {
+      return todo.id !== id;
+    });
+    setTodos(newTodos);
   };
 
   return (
     <TodoTemplate>
       <TodoInput handleInsert={handleInsert} />
-      <TodoList todos={todos} handleToggle={handleToggle} />
+      <TodoList
+        todos={todos}
+        handleToggle={handleToggle}
+        handleRemove={handleRemove}
+      />
     </TodoTemplate>
   );
 };
