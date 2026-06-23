@@ -2,7 +2,8 @@ import { TodoItem } from './TodoItem';
 import styles from './index.module.css';
 
 export const TodoList = (props) => {
-  const { todos, handleToggle, handleRemove } = props;
+  const { todos, handleToggle, handleRemove, editId, setEditId, handleEdit } =
+    props;
 
   return (
     <div className={styles.todoList}>
@@ -12,6 +13,9 @@ export const TodoList = (props) => {
           key={todo.id}
           handleToggle={handleToggle}
           handleRemove={handleRemove}
+          editId={editId}
+          setEditId={setEditId}
+          handleEdit={handleEdit}
         />
       ))}
     </div>

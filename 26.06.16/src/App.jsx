@@ -46,6 +46,17 @@ const App = () => {
     setTodos(newTodos);
   };
 
+  const [editId, setEditId] = useState();
+  const handleEdit = (id, text) => {
+    const newTodos = todos.map((todo) => {
+      if (todo.id === id) {
+        return { ...todo, text: text };
+      }
+      return todo;
+    });
+    setTodos(newTodos);
+  };
+
   return (
     <TodoTemplate>
       <TodoInput handleInsert={handleInsert} />
@@ -53,6 +64,9 @@ const App = () => {
         todos={todos}
         handleToggle={handleToggle}
         handleRemove={handleRemove}
+        editId={editId}
+        setEditId={setEditId}
+        handleEdit={handleEdit}
       />
     </TodoTemplate>
   );
