@@ -24,6 +24,10 @@
 .checkedText {
   flex: 1;
   margin-left: 0.5rem;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 1.125rem;
 }
 
 .checkedText {
@@ -39,16 +43,5 @@
   cursor: pointer;
   &:hover {
     color: #ff8787;
-  }
-}
-
-.edit {
-  display: flex;
-  align-items: center;
-  font-size: 1.5rem;
-  color: #0dad5a;
-  cursor: pointer;
-  &:hover {
-    color: #87d923;
   }
 }

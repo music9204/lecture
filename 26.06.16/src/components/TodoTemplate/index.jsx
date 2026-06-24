@@ -8,5 +8,3 @@ export const TodoTemplate = ({ children }) => {
     </div>
   );
 };
-
-// TagName Property Children

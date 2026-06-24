@@ -2,4 +2,11 @@
   min-height: 320px;
   max-height: 513px;
   overflow-y: auto;
+  background: none;
+  outline: none;
+  border: none;
+  padding: 0.5rem;
+  font-size: 1.125rem;
+  line-height: 1.5;
+  flex: 1;
 }
